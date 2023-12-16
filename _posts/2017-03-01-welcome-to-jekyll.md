@@ -1,6 +1,6 @@
 ---
 title: "Authors"
-layout: post
+layout: default
 ---
 
 Myeonghun Jeong 
