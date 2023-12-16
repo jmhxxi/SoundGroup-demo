@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Jekyll"
+title: "Efficient Parallel Audio Modeling"
 layout: post
 ---
 
