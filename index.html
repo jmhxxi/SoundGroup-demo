@@ -70,12 +70,40 @@
             text-align: center;
             vertical-align: top;
         }
+    .scroll-buttons {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .scroll-buttons button {
+      font-size: 16px;
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #f8f9fb; /* Adjusted to match the audio sample table background color */
+      color: #343a40;
+      border: 2px solid #343a40;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .scroll-buttons button:hover {
+      background-color: #343a40;
+      color: #f8f9fa;
+    }
     </style>
     <title>Efficient Parallel Audio Generation using Group Masked Language Modeling</title>
 </head>
 
 <body>
 
+      <!-- Scroll Buttons -->
+  <div class="scroll-buttons" style="background-color: #30718b">
+    <button onclick="scrollToSection('abstract-section')">Abstract</button>
+    <button onclick="scrollToSection('same-prompt-section')">Same Prompt Speaker</button>
+    <button onclick="scrollToSection('different-prompt-section')">Different Prompt Speaker</button>
+  </div>
     <div class="container title-container">
         <div class="row mt-5 mb-3">
             <div class="col">
@@ -93,7 +121,7 @@
         </div>
     </div>
 
-    <div class="container abstract-container">
+    <div class="container abstract-container" id="abstract-section">
     <center>
     <img src="overview.png" alt="My Image" height="300">
 
@@ -113,7 +141,7 @@
         </div>
     </center></center></div>
 
-    <div class="container audio-samples-container">
+    <div div="" class="container audio-samples-container" id="same-prompt-section">
         <div class="row">
             <div class="col">
                 <p class="sample-title">Same Prompt Speaker</p>
@@ -273,7 +301,7 @@
 
 <br><br><br>
 
-    <div class="container audio-samples-container">
+    <div class="container audio-samples-container" id="different-prompt-section">
         <div class="row">
             <div class="col">
                 <p class="sample-title">Different Prompt Speaker (zero-shot voice conversion)</p>
@@ -439,6 +467,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
+  <!-- Scroll script -->
+  <script>
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
 
 </body></html>
